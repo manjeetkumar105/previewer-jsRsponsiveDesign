@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Markdown Previewer</title>
+
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+	<style type="text/css">
+		body {
+			background: #87B5B5;
+		}
+		.small-div {
+			width: 45%;
+			margin: auto;
+			height: 260px;
+			/*overflow-y: scroll;*/
+			background-color: #C0D8D8;
+			box-shadow: 2px 2px 4px 3px #000000;
+			margin-bottom: 25px;
+			line-height: 2.5em;
+		}
+		p {
+			margin-top: -6px;
+		}
+		.header-div {
+			width: 100%;
+			height: 30px;
+			background-color: #389393;
+			box-shadow: 2px 2px 4px 1px #000000;
+			/*margin-top: -20px;*/
+		}
+		.header-div>h3 {
+			padding-left: 40px;
+		}
+		.header-sec>h3 {
+			padding-top: 3px;
+			padding-left: 36px;
+		}
+		.scroll-div {
+			overflow-y: scroll;
+			height: 230px;
+		}
+		.scroll-part{
+			width: 50%;
+			margin-left: 10px;
+			margin-top: 10px;
+			font-size: 0.77em;
+			line-height: 1.4em;
+			font-family: sans-serif;
+		}
+		.showcase-div {
+			width: 65%;
+			margin: auto;
+			height: 1140px;
+			/*overflow-y: scroll;*/
+			background-color: #C0D8D8;
+			box-shadow: 2px 2px 4px 3px #000000;
+			margin-bottom: 20px;
+		}
+		.header-sec {
+			width: 100%;
+			height: 30px;
+			background-color: #389393;
+			box-shadow: 2px 2px 4px 1px #000000;
+		}
+		.scroll-sec {
+			height: 630px;
+		}
+		.scroll-part-second {
+			width: 80%;
+			line-height: 1em;
+			margin-left: 8px;
+		}
+		.scroll-part-second>h1 {
+			border-bottom: 2px #000000 solid;
+			padding-bottom: 10px;
+		}
+		.scroll-part-second>h3 {
+			border-bottom: 1px #000000 solid;
+			padding-bottom: 5px;
+			font-size: 23px;
+		}
+		.scroll-part-second>h4 {
+			font-size: 18px;
+		}
+		.fa-free-code-camp {
+			float: left;
+			padding-left: 8px;
+			padding-top: 6px;
+		}
+		.fa-arrows-alt {
+			float: right;
+			padding-right: 8px;
+			padding-top: 5px;
+		}
+		.white-div {
+			background-color: #ffffff;
+			width: 120%;
+			padding-left: 10px;
+		}
+
+		/*Responsive Design*/
+		@media(max-width: 800px) {
+			.small-div {
+				width: 90%;
+				height: 200px;
+			}
+			.scroll-div {
+				height: 170px;
+			}
+			.showcase-div {
+				width: 100%;
+			}
+			.showcase-div {
+				height: 1180px;
+			}
+			h1 {
+				line-height: 1em;
+			}
+		}
+
+		
+	</style>
+</head>
+<body>
+
+	<!-- <i title="no-stack-dub-sack" class="fa fa-free-code-camp"></i>
+		<i class="fa fa-arrows-alt"></i>
+	-->
+
+	<div class="small-div">
+		<div class="header-div">
+			<i class="fa fa-free-code-camp"></i>
+			<i class="fa fa-arrows-alt"></i>
+			<h3>Editor</h3>
+		</div>
+
+		<div class="scroll-div">
+			<div class="scroll-part">
+
+			   <span>
+				    # Welcome to my React Markdown Previewer!
+		        </span>
+			    <p>
+			    	## This is a sub-heading...<br>
+	                ### And here's some other cool stuff:
+			    </p>
+			    <p>Heres some code, `<div></div>`, between 2 backticks.</p>
+			    <p>```</p>
+			    <p>// this is multi-line code:</p>
+			    <p>
+			    	function anotherExample(firstLine, lastLine) {
+					  if (firstLine == '```' && lastLine == '```') {
+					    return multiLineCode;
+					  }
+					}
+	                ```
+			    </p>
+
+			    <p>
+			    	You can also make text **bold**... whoa!
+					Or _italic_.
+					Or... wait for it... **_both!_**
+					And feel free to go crazy ~~crossing stuff out~~.
+			    </p>
+
+			    <p>
+			    	There's also [links](https://www.freecodecamp.com), and
+	                > Block Quotes!
+			    </p>
+
+			    <p>
+			    	And if you want to get really crazy, even tables:
+			    </p>
+
+			    <p>
+			    	Wild Header | Crazy Header | Another Header?
+					------------ | ------------- | ------------- 
+					Your content can | be here, and it | can be here....
+					And here. | Okay. | I think we get it.
+			    </p>
+
+			    <ul style="list-style-type: none;">
+			    	<li>
+			    		--And of course there are lists.
+			    		<ul style="list-style-type: none;">
+			    			<li>
+			    				--Some are bulleted.
+			    				<ul style="list-style-type: none;">
+			    					<li>
+			    						--With different indentation levels.
+			    						<ul style="list-style-type: none;">
+			    							<li>
+			    							    --That look like this.	
+			    							</li>
+			    						</ul>
+			    					</li>
+			    				</ul>
+			    			</li>
+			    		</ul>
+			    	</li>
+			    </ul>
+
+			    <p>
+			    	1. And there are numbererd lists too.<br>
+					1. Use just 1s if you want! <br>
+					1. But the list goes on...<br>
+					- Even if you use dashes or asterisks.<br>
+					* And last but not least, let's not forget embedded images:
+
+			    </p>
+
+			    <p>
+			    	![React Logo w/ Text](https://goo.gl/Umyytc)
+			    </p>
+
+
+			</div><!-- setting-width --> 
+
+		</div>
+	</div><!--small-div --> 
+
+	<div class="showcase-div">
+
+		<div class="header-sec">
+			<i class="fa fa-free-code-camp"></i>
+			<i class="fa fa-arrows-alt"></i>
+			<h3>Previewer</h3>
+		</div>
+
+		<div class="scroll-sec">
+			<div class="scroll-part-second">
+				
+				<h1>
+					Welcome to my React Markdown Previewer!
+				</h1>
+
+				<h3>
+					This is a sub-heading...
+				</h3>
+
+				<h4>
+					And here's some other cool stuff:
+				</h4>
+				<p>
+					Heres some code, between 2 backticks.
+				</p>
+
+				<div class="white-div">
+					<h5>// this is multi-line code:</h5>
+					<h5>
+						function anotherExample(firstLine, lastLine) { <br>
+						  if (firstLine == '```' && lastLine == '```') {<br>
+						    return multiLineCode;
+						  }
+						}
+					</h5>
+				</div>
+				<p>
+					You can also make text <bold>bold</bold>... whoa!<br>
+					Or <i>italic</i>.<br>
+					Or... wait for it... <bold><i>both!</i></bold> <br>
+					And feel free to go <strike>crazy crossing stuff out.</strike>
+				</p>
+				<p>
+					There's also <a>links</a>, and
+				</p>
+				<p>
+					| Block Quotes!
+				</p>
+				<p>
+					And if you want to get really crazy, even tables:
+				</p>
+
+				<table>
+					<thead>
+						<tr>
+							<td>Wild Header	</td>
+							<td>Crazy Header</td>
+							<td>Another Header?</td>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>Your content can</td>
+							<td>be here, and it</td>
+							<td>can be here....</td>
+						</tr>
+						<tr>
+							<td>And here.</td>
+							<td>Okay.</td>
+							<td>I think we get it.</td>
+						</tr>
+					</tbody>
+				</table>
+
+				<ul>
+					<li>
+						And of course there are lists
+						<ul style="list-style-type: circle;">
+							<li>
+								Some are bulleted.
+								<ul style="list-style-type: square;">
+									<li>
+										With different indentation levels.
+										<ul style="list-style-type: square;">
+											<li>
+												That look like this.
+											</li>
+										</ul>
+									</li>
+								</ul>
+							</li>
+						</ul>
+					</li>
+				</ul>
+
+				<ul>
+					<li>
+						And there are numbererd lists too.
+					</li>
+					<li>Use just 1s if you want!</li>
+					<li>But the list goes on...</li>
+					<li>
+						Even if you use dashes or asterisks.
+					</li>
+					<li>
+						And last but not least, let's not forget embedded images:
+					</li>
+				</ul>
+
+				<img src="logoImg.PNG">
+
+			</div>
+
+		</div><!-- scroll-div -->
+		
+	</div><!-- showcase-div -- >
+
+	<script type="text/javascript">
+		// document.querySelector('.fa-arrows-alt').addEventListener('click', function() {
+		// 	alert('jay');
+		// })
+		
+	</script>
+
+
+</body>
+</html>
